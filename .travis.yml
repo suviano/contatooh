@@ -1,6 +1,15 @@
 language: node_js
+notifications:
+  email: marcossilvano496@gmail.com
 node_js:
   - 0.10
+services:
+  - mongodb
+env:
+  global:
+    - NODE_ENV: test
+addons:
+  sauce_connect: true
 notifications:
   - marcossilvano496@gmail.com
 before_install:
@@ -11,7 +20,10 @@ before_install:
   - webdriver-manager update
   - bower install
 before_script:
+  - node test/data.js
   - grunt
   - cd dist
 script:
   - karma start config/karma.config.js --single-run --browsers PhantomJS
+  - node server &
+  - protractor config/protractor.js
