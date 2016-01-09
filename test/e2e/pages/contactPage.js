@@ -17,16 +17,5 @@ var contactPage = function() {
   this.selectPrimaryEmergencyOfList = function() {
     element(by.css('option[value="0"]')).click();
   };
-  this.getUserLogged = function(name) {
-    return element(by.id('loggedUser')).getText();
-  };
-  this.getTotalItemInTheList = function() {
-    return element.all(by.repeater('contact in contacts')).count();
-  };
-  this.removeFisrtItemOfList = function() {
-    element(by.repeater('contact in contacts').row(0))
-      .element(by.css('.btn'))
-      .click();
-  };
 }
 module.exports = contactPage;
