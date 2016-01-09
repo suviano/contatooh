@@ -1,3 +1,6 @@
+/* global by */
+/* global element */
+/* global browser */
 var contactPage = function() {
   this.visit = function() {
     browser.get('http://localhost:3000/#/contact');

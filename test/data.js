@@ -1,3 +1,4 @@
+/* global process */
 var MongoClient = require('mongodb').MongoClient;
 
 var contacts = [

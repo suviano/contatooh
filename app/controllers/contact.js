@@ -44,7 +44,7 @@ module.exports = function(app) {
   controller.saveContact = function(req, res) {
     var _id = req.body._id;
 
-    contact_data = {
+    var contact_data = {
       "name": req.body.name,
       "email": req.body.email,
       "emergency": req.body.emergency || null

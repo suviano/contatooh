@@ -1,3 +1,4 @@
+/* global browser */
 var config = require('./config')();
 
 exports.config = {

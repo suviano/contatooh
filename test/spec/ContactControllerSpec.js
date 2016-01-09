@@ -1,3 +1,4 @@
+/* global inject */
 describe("ContactController", function() {
   var $scope, $httpBackend;
 
