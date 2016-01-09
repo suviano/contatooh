@@ -1,5 +1,5 @@
 angular.module('contatooh').controller('ContactsController',
-    function($scope, Contact, Contacts) {
+    function ($scope, Contact, Contacts) {
         $scope.contacts = [];
         $scope.message = {
             text: ''
@@ -8,26 +8,26 @@ angular.module('contatooh').controller('ContactsController',
 
         function searchContacts() {
             Contacts.query(
-                function(contacts) {
+                function (contacts) {
                     $scope.contacts = contacts;
                     $scope.message = {};
                 },
-                function(erro) {
+                function (erro) {
                     $scope.message = {
                         text: 'Not possible find the contact'
                     };
                     console.log(erro);
                 }
-            );
+                );
         }
         searchContacts();
 
-        $scope.remove = function(contact) {
+        $scope.remove = function (contact) {
             Contact.delete({
-                    id: contact._id
-                },
+                id: contact._id
+            },
                 searchContacts,
-                function(erro) {
+                function (erro) {
                     $scope.message = {
                         text: 'Not possible remove the contact'
                     };
