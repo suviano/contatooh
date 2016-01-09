@@ -10,8 +10,6 @@ env:
     - NODE_ENV: test
 addons:
   sauce_connect: true
-notifications:
-  - marcossilvano496@gmail.com
 before_install:
   - npm install -g bower
   - npm install -g grunt-cli

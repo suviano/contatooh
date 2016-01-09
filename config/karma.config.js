@@ -1,11 +1,11 @@
 // Karma configuration
-// Generated on Sun Jan 03 2016 12:50:23 GMT-0200 (BRST)
+// Generated on Sat Jan 09 2016 15:48:41 GMT-0200 (BRST)
 
 module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '..',
 
 
     // frameworks to use
@@ -15,24 +15,18 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '../public/vendor/angular/angular.js',
-      '../public/vendor/angular-mocks/angular-mocks.js',
-      '../public/vendor/angular-resource/angular-resource.js',
-      '../public/vendor/angular-route/angular-route.js',
-      '../public/js/main.js',
-      '../public/js/controllers/**/*.js',
-      '../public/js/services/**/*.js',
-      '../test/spec/**/*Spec.js'
     ],
 
 
     // list of files to exclude
-    exclude: [],
+    exclude: [
+    ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {},
+    preprocessors: {
+    },
 
 
     // test results reporter to use

@@ -14,7 +14,7 @@ describe('Main page', function() {
 
     it('Should remove the contact list', function() {
         var totalBefore = page.getTotalItemInTheList();
-        page.removeFisrtItemOfList();
+        page.removeFirstItemOfList();
         var totalAfter = page.getTotalItemInTheList();
         expect(totalAfter).toBeLessThan(totalBefore);
     });
